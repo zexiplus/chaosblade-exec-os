@@ -1,4 +1,4 @@
-module github.com/chaosblade-io/chaosblade-exec-os
+module github.com/lomoonmoonbird/chaosblade-exec-os
 
 go 1.20
 
