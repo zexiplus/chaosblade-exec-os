@@ -21,9 +21,9 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/chaosblade-io/chaosblade-exec-os/exec/category"
-	"github.com/chaosblade-io/chaosblade-spec-go/log"
-	"github.com/chaosblade-io/chaosblade-spec-go/spec"
+	"github.com/lomoonmoonbird/chaosblade-exec-os/exec/category"
+	"github.com/lomoonmoonbird/chaosblade-spec-go/log"
+	"github.com/lomoonmoonbird/chaosblade-spec-go/spec"
 )
 
 const TravelTimeBin = "chaos_timetravel"

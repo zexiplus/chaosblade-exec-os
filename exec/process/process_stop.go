@@ -19,8 +19,8 @@ package process
 import (
 	"context"
 	"fmt"
-	"github.com/chaosblade-io/chaosblade-exec-os/exec/category"
-	"github.com/chaosblade-io/chaosblade-spec-go/spec"
+	"github.com/lomoonmoonbird/chaosblade-exec-os/exec/category"
+	"github.com/lomoonmoonbird/chaosblade-spec-go/spec"
 )
 
 const StopProcessBin = "chaos_stopprocess"

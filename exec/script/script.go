@@ -19,10 +19,10 @@ package script
 import (
 	"context"
 	"fmt"
-	"github.com/chaosblade-io/chaosblade-exec-os/exec"
+	"github.com/lomoonmoonbird/chaosblade-exec-os/exec"
 	"strings"
 
-	"github.com/chaosblade-io/chaosblade-spec-go/spec"
+	"github.com/lomoonmoonbird/chaosblade-spec-go/spec"
 )
 
 type ScriptCommandModelSpec struct {

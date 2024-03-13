@@ -17,7 +17,7 @@
  package systemd
 
  import (
-	 "github.com/chaosblade-io/chaosblade-spec-go/spec"
+	 "github.com/lomoonmoonbird/chaosblade-spec-go/spec"
  )
 
  type SystemdCommandModelSpec struct {

@@ -19,16 +19,16 @@ package disk
 import (
 	"context"
 	"fmt"
-	"github.com/chaosblade-io/chaosblade-exec-os/exec"
-	"github.com/chaosblade-io/chaosblade-spec-go/channel"
-	"github.com/chaosblade-io/chaosblade-spec-go/log"
+	"github.com/lomoonmoonbird/chaosblade-exec-os/exec"
+	"github.com/lomoonmoonbird/chaosblade-spec-go/channel"
+	"github.com/lomoonmoonbird/chaosblade-spec-go/log"
 	"path"
 	"strings"
 
-	"github.com/chaosblade-io/chaosblade-spec-go/spec"
-	"github.com/chaosblade-io/chaosblade-spec-go/util"
+	"github.com/lomoonmoonbird/chaosblade-spec-go/spec"
+	"github.com/lomoonmoonbird/chaosblade-spec-go/util"
 
-	"github.com/chaosblade-io/chaosblade-exec-os/exec/category"
+	"github.com/lomoonmoonbird/chaosblade-exec-os/exec/category"
 )
 
 const BurnIOBin = "chaos_burnio"
