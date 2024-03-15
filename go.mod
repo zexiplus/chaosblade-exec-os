@@ -31,6 +31,5 @@ require (
 )
 
 replace (
-	github.com/lomoonmoonbird/chaosblade-spec-go => ../chaosblade-spec-go
-	github.com/lomoonmoonbird/chaosblade-spec-go v1.8.5 => ../chaosblade-spec-go
+	github.com/lomoonmoonbird/chaosblade-spec-go => /home/chaosblade/chaosblade-spec-go
 )
