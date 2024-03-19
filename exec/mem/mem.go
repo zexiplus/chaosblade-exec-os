@@ -278,7 +278,7 @@ func burnMemWithCache(ctx context.Context, memPercent, memReserve, memRate int, 
 			log.Fatalf(ctx, "calculate memsize err, %v", err)
 		}
 		fillMem := expectMem
-
+		log.Fatalf(ctx, "moonmoonbird,expectMem: %d, memRate: %d", expectMem, memRate)
 		if expectMem > 0 {
 			if expectMem > int64(memRate) {
 				fillMem = int64(memRate)
