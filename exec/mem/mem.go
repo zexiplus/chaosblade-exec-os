@@ -278,14 +278,14 @@ func burnMemWithCache(ctx context.Context, memPercent, memReserve, memRate int, 
 			log.Fatalf(ctx, "calculate memsize err, %v", err)
 		}
 		fillMem := expectMem
-		log.Fatalf(ctx, "moonmoonbird,expectMem: %d, memRate: %d", expectMem, memRate)
+		log.Debugf(ctx, "moonmoonbird,expectMem: %d, memRate: %d", expectMem, memRate)
 		if expectMem > 0 {
 			if expectMem > int64(memRate) {
 				fillMem = int64(memRate)
 			}
 			nFilePath := fmt.Sprintf("%s%d", filePath, fileCount)
 			c := fmt.Sprintf("if=/dev/zero of=%s bs=1M count=%d", nFilePath, fillMem)
-			log.Fatalf(ctx, "moonmoonbird, %v, filepath: %s, expectMem: %d, memRate: %d, command: %s", err, filePath, expectMem, memRate, c)
+			log.Debugf(ctx, "moonmoonbird, %v, filepath: %s, expectMem: %d, memRate: %d, command: %s", err, filePath, expectMem, memRate, c)
 			response := cl.Run(ctx, "dd", fmt.Sprintf("if=/dev/zero of=%s bs=1M count=%d", nFilePath, fillMem))
 			if !response.Success {
 				log.Fatalf(ctx, "burn mem with cache err, %v, filepath: %s", err, filePath)
