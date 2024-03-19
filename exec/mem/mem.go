@@ -271,6 +271,7 @@ var fileCount = 1
 
 func burnMemWithCache(ctx context.Context, memPercent, memReserve, memRate int, burnMemMode string, includeBufferCache bool, cl spec.Channel) {
 	filePath := path.Join(path.Join(util.GetProgramPath(), dirName), fileName)
+	_ = os.MkdirAll(path.Join(util.GetProgramPath(), dirName), 0777)
 	tick := time.Tick(time.Second)
 	for range tick {
 		_, expectMem, err := calculateMemSize(ctx, burnMemMode, memPercent, memReserve, includeBufferCache)
