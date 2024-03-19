@@ -280,7 +280,7 @@ func burnMemWithCache(ctx context.Context, memPercent, memReserve, memRate int, 
 		fillMem := expectMem
 		log.Debugf(ctx, "moonmoonbird,expectMem: %d, memRate: %d", expectMem, memRate)
 		if expectMem > 0 {
-			if expectMem > int64(memRate) {
+			if expectMem > int64(memRate) && (int64(memRate) > 0) {
 				fillMem = int64(memRate)
 			}
 			nFilePath := fmt.Sprintf("%s%d", filePath, fileCount)
