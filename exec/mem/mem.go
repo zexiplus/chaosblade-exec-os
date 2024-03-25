@@ -354,8 +354,9 @@ func (ce *memExecutor) start(ctx context.Context, memPercent, memReserve, memRat
 // stop burn mem
 func (ce *memExecutor) stop(ctx context.Context, burnMemMode string) *spec.Response {
 	if burnMemMode == "cache" {
-		_ = os.RemoveAll(path.Join(util.GetProgramPath(), dirName))
+		defer os.RemoveAll(path.Join(util.GetProgramPath(), dirName))
 	}
+
 	ctx = context.WithValue(ctx, "bin", BurnMemBin)
 	return exec.Destroy(ctx, ce.channel, "mem load")
 }
