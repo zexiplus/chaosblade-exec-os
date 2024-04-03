@@ -91,7 +91,7 @@ func startNet(ctx context.Context, netInterface, classRule, localPort, remotePor
 			return spec.ResponseFailWithFlags(spec.ParameterIllegal, "remote-port", remotePort, err)
 		}
 	}
-	if excludePort != "" { 
+	if excludePort != "" {
 		excludePortRanges, err = getExcludePortRanges(ctx, excludePort, ignorePeerPorts, cl)
 		if err != nil {
 			return spec.ResponseFailWithFlags(spec.ParameterIllegal, "exclude-port", excludePort, err)
@@ -460,7 +460,7 @@ func parseIntegerListToPortRanges(flagName string, flagValue string) ([][]int, e
 		if err != nil {
 			return nil, fmt.Errorf(spec.ParameterIllegal.Sprintf(flagName, flagValue, err))
 		}
-		if startIndex <= 0 || startIndex > math.MaxUint16 || endIndex <= 0 || endIndex >= math.MaxUint16 || endIndex < startIndex {
+		if startIndex <= 0 || startIndex > math.MaxUint16 || endIndex <= 0 || endIndex > math.MaxUint16 || endIndex < startIndex {
 			return nil, fmt.Errorf(spec.ParameterIllegal.Sprintf(flagName, flagValue, "Illegal port range"))
 		}
 		for i := startIndex; i <= endIndex; i++ {

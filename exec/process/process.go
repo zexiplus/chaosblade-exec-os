@@ -19,12 +19,13 @@ package process
 import (
 	"context"
 	"fmt"
+	"strconv"
+	"strings"
+
 	"github.com/lomoonmoonbird/chaosblade-spec-go/channel"
 	"github.com/lomoonmoonbird/chaosblade-spec-go/log"
 	"github.com/lomoonmoonbird/chaosblade-spec-go/spec"
 	"github.com/lomoonmoonbird/chaosblade-spec-go/util"
-	"strconv"
-	"strings"
 )
 
 type ProcessCommandModelSpec struct {
@@ -138,7 +139,7 @@ func getPids(ctx context.Context, cl spec.Channel, model *spec.ExpModel, uid str
 	}
 	if pids == nil || len(pids) == 0 {
 		if ignoreProcessNotFound {
-			return spec.Success()
+			return spec.Success("ignore")
 		}
 		return spec.ReturnFail(spec.OsCmdExecFailed, fmt.Sprintf("%s process not found", killProcessName))
 	}

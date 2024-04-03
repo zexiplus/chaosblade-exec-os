@@ -19,11 +19,12 @@ package disk
 import (
 	"context"
 	"fmt"
+	"path"
+	"strings"
+
 	"github.com/lomoonmoonbird/chaosblade-exec-os/exec"
 	"github.com/lomoonmoonbird/chaosblade-spec-go/channel"
 	"github.com/lomoonmoonbird/chaosblade-spec-go/log"
-	"path"
-	"strings"
 
 	"github.com/lomoonmoonbird/chaosblade-spec-go/spec"
 	"github.com/lomoonmoonbird/chaosblade-spec-go/util"

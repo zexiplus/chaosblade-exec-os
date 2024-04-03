@@ -122,6 +122,9 @@ func (kpe *KillProcessExecutor) Exec(uid string, ctx context.Context, model *spe
 
 	resp := getPids(ctx, kpe.channel, model, uid)
 	if !resp.Success {
+		if resp.Result == "ignore" {
+			return spec.ReturnSuccess("success")
+		}
 		return resp
 	}
 	pids := resp.Result.(string)

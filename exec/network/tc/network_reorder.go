@@ -19,6 +19,7 @@ package tc
 import (
 	"context"
 	"fmt"
+
 	"github.com/lomoonmoonbird/chaosblade-exec-os/exec/category"
 	"github.com/lomoonmoonbird/chaosblade-spec-go/log"
 	"github.com/lomoonmoonbird/chaosblade-spec-go/spec"
@@ -106,7 +107,7 @@ func (ce *NetworkReorderExecutor) Exec(uid string, ctx context.Context, model *s
 	} else {
 		percent := model.ActionFlags["percent"]
 		if percent == "" {
-			log.Errorf(ctx, "percent i nil")
+			log.Errorf(ctx, "percent is nil")
 			return spec.ResponseFailWithFlags(spec.ParameterLess, "percent")
 		}
 		gap := model.ActionFlags["gap"]
