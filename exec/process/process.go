@@ -139,7 +139,7 @@ func getPids(ctx context.Context, cl spec.Channel, model *spec.ExpModel, uid str
 	}
 	if pids == nil || len(pids) == 0 {
 		if ignoreProcessNotFound {
-			return spec.Success("ignore")
+			return spec.ReturnSuccess("ignore")
 		}
 		return spec.ReturnFail(spec.OsCmdExecFailed, fmt.Sprintf("%s process not found", killProcessName))
 	}
