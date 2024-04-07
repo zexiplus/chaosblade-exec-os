@@ -125,11 +125,6 @@ func (be *BurnIOExecutor) Exec(uid string, ctx context.Context, model *spec.ExpM
 		log.Errorf(ctx, "`%s`: path is illegal, is not a directory", directory)
 		return spec.ResponseFailWithFlags(spec.ParameterIllegal, "path", directory, "it must be a directory")
 	}
-	commands := []string{"rm", "dd"}
-	// use local channel
-	if response, ok := localChannel.IsAllCommandsAvailable(ctx, commands); !ok {
-		return response
-	}
 	if _, ok := spec.IsDestroy(ctx); ok {
 		readExists := model.ActionFlags["read"] == "true"
 		writeExists := model.ActionFlags["write"] == "true"
@@ -139,6 +134,12 @@ func (be *BurnIOExecutor) Exec(uid string, ctx context.Context, model *spec.ExpM
 			writeExists = true
 		}
 		return be.stop(ctx, readExists, writeExists, directory)
+	}
+
+	commands := []string{"rm", "dd"}
+	// use local channel
+	if response, ok := localChannel.IsAllCommandsAvailable(ctx, commands); !ok {
+		return response
 	}
 
 	readExists := model.ActionFlags["read"] == "true"
