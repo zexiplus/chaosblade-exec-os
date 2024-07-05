@@ -5,8 +5,8 @@ go 1.20
 require (
 	github.com/containerd/cgroups v1.0.2-0.20210605143700-23b51209bf7b
 	github.com/howeyc/gopass v0.0.0-20190910152052-7cb4b85ec19c
-	github.com/zexiplus/chaosblade-spec-go v1.8.5
 	github.com/shirou/gopsutil v3.21.6+incompatible
+	github.com/zexiplus/chaosblade-spec-go v1.8.5
 	go.uber.org/automaxprocs v1.3.0
 	golang.org/x/crypto v0.0.0-20210711020723-a769d52b0f97
 )
@@ -30,6 +30,4 @@ require (
 	gopkg.in/yaml.v2 v2.4.0 // indirect
 )
 
-replace (
-	github.com/zexiplus/chaosblade-spec-go => /home/chaosblade/chaosblade-spec-go
-)
+replace github.com/zexiplus/chaosblade-spec-go => /home/chaosblade/chaosblade-spec-go
