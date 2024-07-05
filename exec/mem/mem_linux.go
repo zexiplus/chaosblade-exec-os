@@ -19,9 +19,9 @@ package mem
 import (
     "context"
     "fmt"
-    "github.com/lomoonmoonbird/chaosblade-exec-os/exec"
-    "github.com/lomoonmoonbird/chaosblade-spec-go/channel"
-    "github.com/lomoonmoonbird/chaosblade-spec-go/log"
+    "github.com/zexiplus/chaosblade-exec-os/exec"
+    "github.com/zexiplus/chaosblade-spec-go/channel"
+    "github.com/zexiplus/chaosblade-spec-go/log"
     "github.com/containerd/cgroups"
     "github.com/shirou/gopsutil/mem"
     "strconv"

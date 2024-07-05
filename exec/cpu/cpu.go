@@ -19,8 +19,8 @@ package cpu
 import (
 	"context"
 	"fmt"
-	"github.com/lomoonmoonbird/chaosblade-exec-os/exec"
-	"github.com/lomoonmoonbird/chaosblade-spec-go/log"
+	"github.com/zexiplus/chaosblade-exec-os/exec"
+	"github.com/zexiplus/chaosblade-spec-go/log"
 	"os"
 	os_exec "os/exec"
 	"runtime"
@@ -29,10 +29,10 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/lomoonmoonbird/chaosblade-spec-go/spec"
-	"github.com/lomoonmoonbird/chaosblade-spec-go/util"
+	"github.com/zexiplus/chaosblade-spec-go/spec"
+	"github.com/zexiplus/chaosblade-spec-go/util"
 
-	"github.com/lomoonmoonbird/chaosblade-exec-os/exec/category"
+	"github.com/zexiplus/chaosblade-exec-os/exec/category"
 	_ "go.uber.org/automaxprocs/maxprocs"
 )
 

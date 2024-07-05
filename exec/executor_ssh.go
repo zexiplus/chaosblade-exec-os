@@ -19,7 +19,7 @@ package exec
 import (
 	"context"
 	"fmt"
-	"github.com/lomoonmoonbird/chaosblade-spec-go/log"
+	"github.com/zexiplus/chaosblade-spec-go/log"
 	"io/ioutil"
 	"net"
 	"path"
@@ -27,9 +27,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/lomoonmoonbird/chaosblade-exec-os/version"
+	"github.com/zexiplus/chaosblade-exec-os/version"
 
-	"github.com/lomoonmoonbird/chaosblade-spec-go/spec"
+	"github.com/zexiplus/chaosblade-spec-go/spec"
 	"golang.org/x/crypto/ssh"
 
 	"github.com/howeyc/gopass"

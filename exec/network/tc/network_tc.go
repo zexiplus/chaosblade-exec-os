@@ -10,10 +10,10 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/lomoonmoonbird/chaosblade-exec-os/exec"
-	"github.com/lomoonmoonbird/chaosblade-spec-go/log"
-	"github.com/lomoonmoonbird/chaosblade-spec-go/spec"
-	"github.com/lomoonmoonbird/chaosblade-spec-go/util"
+	"github.com/zexiplus/chaosblade-exec-os/exec"
+	"github.com/zexiplus/chaosblade-spec-go/log"
+	"github.com/zexiplus/chaosblade-spec-go/spec"
+	"github.com/zexiplus/chaosblade-spec-go/util"
 )
 
 // TcNetworkBin for network delay, loss, duplicate, reorder and corrupt experiments

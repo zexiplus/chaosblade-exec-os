@@ -19,12 +19,12 @@ package script
 import (
 	"context"
 	"fmt"
-	"github.com/lomoonmoonbird/chaosblade-exec-os/exec"
-	"github.com/lomoonmoonbird/chaosblade-spec-go/log"
+	"github.com/zexiplus/chaosblade-exec-os/exec"
+	"github.com/zexiplus/chaosblade-spec-go/log"
 	"strconv"
 
-	"github.com/lomoonmoonbird/chaosblade-exec-os/exec/category"
-	"github.com/lomoonmoonbird/chaosblade-spec-go/spec"
+	"github.com/zexiplus/chaosblade-exec-os/exec/category"
+	"github.com/zexiplus/chaosblade-spec-go/spec"
 )
 
 type ScriptDelayActionCommand struct {

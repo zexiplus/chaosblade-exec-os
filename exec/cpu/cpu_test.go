@@ -19,7 +19,7 @@ package cpu
 import (
 	"testing"
 
-	"github.com/lomoonmoonbird/chaosblade-spec-go/util"
+	"github.com/zexiplus/chaosblade-spec-go/util"
 )
 
 func TestParseCpuList(t *testing.T) {

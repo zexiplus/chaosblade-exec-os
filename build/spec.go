@@ -17,22 +17,22 @@
 package main
 
 import (
-	"github.com/lomoonmoonbird/chaosblade-exec-os/exec/cpu"
-	"github.com/lomoonmoonbird/chaosblade-exec-os/exec/disk"
-	"github.com/lomoonmoonbird/chaosblade-exec-os/exec/file"
-	"github.com/lomoonmoonbird/chaosblade-exec-os/exec/kernel"
-	"github.com/lomoonmoonbird/chaosblade-exec-os/exec/mem"
-	"github.com/lomoonmoonbird/chaosblade-exec-os/exec/model"
-	"github.com/lomoonmoonbird/chaosblade-exec-os/exec/network"
-	"github.com/lomoonmoonbird/chaosblade-exec-os/exec/process"
-	"github.com/lomoonmoonbird/chaosblade-exec-os/exec/script"
-	"github.com/lomoonmoonbird/chaosblade-exec-os/exec/systemd"
-	"github.com/lomoonmoonbird/chaosblade-exec-os/exec/time"
+	"github.com/zexiplus/chaosblade-exec-os/exec/cpu"
+	"github.com/zexiplus/chaosblade-exec-os/exec/disk"
+	"github.com/zexiplus/chaosblade-exec-os/exec/file"
+	"github.com/zexiplus/chaosblade-exec-os/exec/kernel"
+	"github.com/zexiplus/chaosblade-exec-os/exec/mem"
+	"github.com/zexiplus/chaosblade-exec-os/exec/model"
+	"github.com/zexiplus/chaosblade-exec-os/exec/network"
+	"github.com/zexiplus/chaosblade-exec-os/exec/process"
+	"github.com/zexiplus/chaosblade-exec-os/exec/script"
+	"github.com/zexiplus/chaosblade-exec-os/exec/systemd"
+	"github.com/zexiplus/chaosblade-exec-os/exec/time"
 	"log"
 	"os"
 
-	"github.com/lomoonmoonbird/chaosblade-spec-go/spec"
-	"github.com/lomoonmoonbird/chaosblade-spec-go/util"
+	"github.com/zexiplus/chaosblade-spec-go/spec"
+	"github.com/zexiplus/chaosblade-spec-go/util"
 )
 
 // main creates the yaml file of the experiments in the project
