@@ -19,8 +19,6 @@ package cpu
 import (
 	"context"
 	"fmt"
-	"github.com/zexiplus/chaosblade-exec-os/exec"
-	"github.com/zexiplus/chaosblade-spec-go/log"
 	"os"
 	os_exec "os/exec"
 	"runtime"
@@ -28,6 +26,9 @@ import (
 	"strings"
 	"syscall"
 	"time"
+
+	"github.com/zexiplus/chaosblade-exec-os/exec"
+	"github.com/zexiplus/chaosblade-spec-go/log"
 
 	"github.com/zexiplus/chaosblade-spec-go/spec"
 	"github.com/zexiplus/chaosblade-spec-go/util"
@@ -166,6 +167,7 @@ func (ce *cpuExecutor) SetChannel(channel spec.Channel) {
 }
 
 func (ce *cpuExecutor) Exec(uid string, ctx context.Context, model *spec.ExpModel) *spec.Response {
+	fmt.Println("executedddddddddddddd")
 	if ce.channel == nil {
 		return spec.ResponseFailWithFlags(spec.ChannelNil)
 	}
@@ -282,7 +284,7 @@ func (ce *cpuExecutor) start(ctx context.Context, cpuList string, cpuCount, cpuP
 		}
 	}
 
-	// make CPU slowly climb to some level, to simulate slow resource competition 
+	// make CPU slowly climb to some level, to simulate slow resource competition
 	// which system faults cannot be quickly noticed by monitoring system.
 	slope(ctx, cpuPercent, climbTime, &slopePercent, percpu, cpuIndex)
 
